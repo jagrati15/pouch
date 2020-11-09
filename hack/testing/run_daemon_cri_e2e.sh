@@ -7,6 +7,7 @@ source utils.sh
 
 cd ../../
 readonly REPO_BASE="$(pwd -P)"
+readonly arch=$(uname -m)
 
 # keep the first one only
 GOPATH="${GOPATH%%:*}"
