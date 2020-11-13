@@ -171,6 +171,7 @@ jobs:
     - arch: amd64
       dist: focal
       stage: test
+      install: skip
       name: "Integration test 2"
       script:
         - sudo apt-get install -y net-tools libbtrfs-dev
@@ -186,6 +187,7 @@ jobs:
       virt: vm
       group: edge
       stage: test
+      install: skip
       name: "Integration test 2"
       script:
         - sudo apt-get install -y net-tools libbtrfs-dev
@@ -199,6 +201,7 @@ jobs:
     - arch: amd64
       dist: focal
       stage: test
+      install: skip
       name: "Integration test 3"
       script:
         - sudo apt-get install -y net-tools libbtrfs-dev
@@ -214,6 +217,7 @@ jobs:
       virt: vm
       group: edge
       stage: test
+      install: skip
       name: "Integration test 3"
       script:
         - sudo apt-get install -y net-tools libbtrfs-dev
