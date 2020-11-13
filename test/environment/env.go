@@ -62,7 +62,7 @@ var (
 	CniRepo = "calico/cni"
 
 	// CniTag the tag for cni image
-	CniTag = "v3.1.3"
+	CniTag = "v3.11.3"
 
 	// GateWay default gateway for test
 	GateWay = "192.168.1.1"
