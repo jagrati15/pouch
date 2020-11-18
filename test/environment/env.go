@@ -185,7 +185,7 @@ func IsAliKernel() bool {
 
 //IsArch checks if the architecture is arm64.
 func IsArch() bool {
-	return runtime.GOARCH == "amd64"
+	return runtime.GOARCH == "arm64"
 }
 
 // IsDumbInitExist checks if the dumb-init binary exists on host.
