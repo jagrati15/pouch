@@ -198,7 +198,11 @@ func RunCmd(cmd Cmd, cmdOperators ...CmdOp) *Result {
 		op(&cmd)
 	}
 	result := StartCmd(cmd)
+	fmt.Printf("Result\n")
+	fmt.Printf("%v\n",result)
+	fmt.Printf("%v\n",result.Error)
 	if result.Error != nil {
+		fmt.Printf("Inseide If")
 		return result
 	}
 	return WaitOnCmd(cmd.Timeout, result)
@@ -249,8 +253,11 @@ func buildCmd(cmd Cmd) *Result {
 // WaitOnCmd waits for a command to complete. If timeout is non-nil then
 // only wait until the timeout.
 func WaitOnCmd(timeout time.Duration, result *Result) *Result {
+	fmt.Printf("Inside Wait")
 	if timeout == time.Duration(0) {
+		fmt.Printf("Inside another if\n")
 		result.setExitError(result.Cmd.Wait())
+		fmt.Printf("%v\n",result)
 		return result
 	}
 
@@ -270,5 +277,7 @@ func WaitOnCmd(timeout time.Duration, result *Result) *Result {
 	case err := <-done:
 		result.setExitError(err)
 	}
+	fmt.Printf("NEW RESULT")
+	fmt.Printf("%v\n",result)
 	return result
 }
