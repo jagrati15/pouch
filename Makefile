@@ -47,7 +47,7 @@ endif
 BUILD_ROOT := ${CURDIR}/install/${GOARCH}
 
 # DEST_DIR is base path used to install pouch & pouchd
-DEST_DIR=.
+DEST_DIR=/usr/local
 
 # PREFIX is base path to install pouch & pouchd
 # PREFIX will override the value of DEST_DIR when specified
