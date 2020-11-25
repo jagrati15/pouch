@@ -308,6 +308,9 @@ func (suite *PouchRunMemorySuite) TestRunWithDefaultShm(c *check.C) {
 	res.Assert(c, icmd.Success)
 
 	res = command.PouchRun("exec", cname, "df", "-k", "/dev/shm")
+	fmt.Printf("AAAAAAAAAAAAAAAAAAAAAAAAA")
+	fmt.Printf("%v/n",c)
+	fmt.Printf("%v/n",icmd.Success)
 	res.Assert(c, icmd.Success)
 
 	c.Assert(util.PartialEqual(res.Stdout(), "65536"), check.IsNil)
